@@ -11,10 +11,9 @@ public class Program {
 	public static void main(String[] args) {
 		try (Fornitore_ProdottoConnection h = new Fornitore_ProdottoConnection("localhost", 5432)) {
 
-			// Aggiungi Fonitore
-			// FornitoreDTO f1 = new FornitoreDTO(3, "ipercoop", "via dei mille",
-			// "firenze");
-			// h.save(f1);
+			//Aggiungi Fonitore
+			 FornitoreDTO f1 = new FornitoreDTO(3, "ipercoop", "via dei mille","firenze");
+			 h.save(f1);
 
 			// Elenco Fonitori
 			System.out.println("================");
@@ -29,9 +28,8 @@ public class Program {
 			h.getId(2).stream().forEach(a -> System.out.println(a));
 
 			// Aggiungi Prodotto
-			// ProdottoDTO p1 = new ProdottoDTO(1, "fiesta", "merendine", "ferrero", 3,
-			// 4.0);
-			// h.addProdotto(p1);
+			   ProdottoDTO p1 = new ProdottoDTO(1, "fiesta", "merendine", "ferrero", 3, 4.0);
+			   h.addProdotto(p1);
 
 			// Elenco Prodotti
 			System.out.println("===============");
